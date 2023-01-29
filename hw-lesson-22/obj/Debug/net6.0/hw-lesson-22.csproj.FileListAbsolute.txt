@@ -1,0 +1,15 @@
+C:\Users\o.rovenskiy\source\repos\otus-hw-22\hw-lesson-22\bin\Debug\net6.0\hw-lesson-22.exe
+C:\Users\o.rovenskiy\source\repos\otus-hw-22\hw-lesson-22\bin\Debug\net6.0\hw-lesson-22.deps.json
+C:\Users\o.rovenskiy\source\repos\otus-hw-22\hw-lesson-22\bin\Debug\net6.0\hw-lesson-22.runtimeconfig.json
+C:\Users\o.rovenskiy\source\repos\otus-hw-22\hw-lesson-22\bin\Debug\net6.0\hw-lesson-22.dll
+C:\Users\o.rovenskiy\source\repos\otus-hw-22\hw-lesson-22\bin\Debug\net6.0\hw-lesson-22.pdb
+C:\Users\o.rovenskiy\source\repos\otus-hw-22\hw-lesson-22\obj\Debug\net6.0\hw-lesson-22.csproj.AssemblyReference.cache
+C:\Users\o.rovenskiy\source\repos\otus-hw-22\hw-lesson-22\obj\Debug\net6.0\hw-lesson-22.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\o.rovenskiy\source\repos\otus-hw-22\hw-lesson-22\obj\Debug\net6.0\hw-lesson-22.AssemblyInfoInputs.cache
+C:\Users\o.rovenskiy\source\repos\otus-hw-22\hw-lesson-22\obj\Debug\net6.0\hw-lesson-22.AssemblyInfo.cs
+C:\Users\o.rovenskiy\source\repos\otus-hw-22\hw-lesson-22\obj\Debug\net6.0\hw-lesson-22.csproj.CoreCompileInputs.cache
+C:\Users\o.rovenskiy\source\repos\otus-hw-22\hw-lesson-22\obj\Debug\net6.0\hw-lesson-22.dll
+C:\Users\o.rovenskiy\source\repos\otus-hw-22\hw-lesson-22\obj\Debug\net6.0\refint\hw-lesson-22.dll
+C:\Users\o.rovenskiy\source\repos\otus-hw-22\hw-lesson-22\obj\Debug\net6.0\hw-lesson-22.pdb
+C:\Users\o.rovenskiy\source\repos\otus-hw-22\hw-lesson-22\obj\Debug\net6.0\hw-lesson-22.genruntimeconfig.cache
+C:\Users\o.rovenskiy\source\repos\otus-hw-22\hw-lesson-22\obj\Debug\net6.0\ref\hw-lesson-22.dll

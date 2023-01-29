@@ -1,75 +1,105 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿
 using System.Xml.Linq;
-
-Console.WriteLine("Hello, World!");
-
-
-
-Console.WriteLine("введите имя и зарплату сотрудника");
-
-Employee root = null;
+using static System.Net.Mime.MediaTypeNames;
 
 while (true)
+
 {
+    int variation;
 
-    Console.Write("Введите имя: ");
-    var _name = Console.ReadLine();
+    bool textCheck = false;
 
 
 
-    if (_name == "stop")
+    Console.WriteLine("введите имя и зарплату сотрудника");
+
+    Employee root = null;
+
+    while (true)
     {
-        break;
-    }
 
+        Console.Write("Введите имя: ");
+        var _name = Console.ReadLine();
 
-    Console.Write("Введите зарплату: ");
-    var s = Console.ReadLine();
-    var d = int.Parse(s);
+        textCheck = string.IsNullOrEmpty(_name);
 
-    if (root == null)
-    {
-        root = new Employee()
+        if (textCheck)
         {
-            Name = _name,
-            Sallary = d
-        };
-    }
-    else
-    {
-        AddEmployee(root, new Employee
+            break;
+        }
+
+
+        Console.Write("Введите зарплату: ");
+        var s = Console.ReadLine();
+        var d = int.Parse(s);
+
+        if (root == null)
         {
-            Name = _name,
-            Sallary = d
-        });
+            root = new Employee()
+            {
+                Name = _name,
+                Sallary = d
+            };
+        }
+        else
+        {
+            AddEmployee(root, new Employee
+            {
+                Name = _name,
+                Sallary = d
+            });
+        }
     }
+
+
+    Console.WriteLine("Sorted:");
+    Traverse(root);
+
+
+
+    while (true)
+    {
+
+
+        Console.WriteLine("Какая зарплата ищется");
+
+        var s = Console.ReadLine();
+
+        int d = int.Parse(s);
+
+
+        var (employee, level) = FindEmployee(root, d, level: 1);
+        if (employee == null)
+        {
+            Console.WriteLine("Такой сотрудник не найден");
+        }
+        else
+        {
+            Console.WriteLine($"Сщтрудник найден, его имя:   {employee.Name}, его зарплата:   {employee.Sallary}, level: {level}");
+        }
+
+
+        Console.WriteLine("для нового поиска сотрудника по зарплате введите 1, для ввода нового списка сотрудников введите 0");
+
+        variation = int.Parse(Console.ReadLine());
+
+        if (variation == 0)
+        {
+            break;
+        }
+
+        if (variation == 1)
+        {
+            continue;
+        }
+
+
+
+    }
+
+
 }
 
-
-Console.WriteLine("Sorted:");
-Traverse(root);
-
-
-
-Console.WriteLine("Какая зарплата ищется");
-while (true)
-{
-    var s = Console.ReadLine();
-    var d = int.Parse(s);
-    if (d == 0)
-    {
-        break;
-    }
-    var (employee, level) = FindEmployee(root, d, level: 1);
-    if (employee == null)
-    {
-        Console.WriteLine("Такой сотрудник не найден");
-    }
-    else
-    {
-        Console.WriteLine($"Сщтрудник найден, его имя:   {employee.Name}, его зарплата:   {employee.Sallary}, level: {level}");
-    }
-}
 
 
 static (Employee employee, int level) FindEmployee(Employee root, int number, int level)

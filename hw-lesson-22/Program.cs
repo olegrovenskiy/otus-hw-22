@@ -2,10 +2,18 @@
 using System.Xml.Linq;
 using static System.Net.Mime.MediaTypeNames;
 
+
+int variation = 4;
+
 while (true)
 
 {
-    int variation;
+
+    if (variation == 3)
+    {
+        break;
+    }
+
 
     bool textCheck = false;
 
@@ -75,15 +83,15 @@ while (true)
         }
         else
         {
-            Console.WriteLine($"Сщтрудник найден, его имя:   {employee.Name}, его зарплата:   {employee.Sallary}, level: {level}");
+            Console.WriteLine($"Сщтрудник найден, его имя: {employee.Name}, его зарплата: {employee.Sallary}");
         }
 
 
-        Console.WriteLine("для нового поиска сотрудника по зарплате введите 1, для ввода нового списка сотрудников введите 0");
+        Console.WriteLine("для нового поиска сотрудника по зарплате введите 1, для ввода нового списка сотрудников введите 0 и 3 для выхода из программы");
 
         variation = int.Parse(Console.ReadLine());
 
-        if (variation == 0)
+        if (variation == 0 || variation == 3)
         {
             break;
         }
@@ -93,10 +101,7 @@ while (true)
             continue;
         }
 
-
-
     }
-
 
 }
 
@@ -127,11 +132,6 @@ static (Employee employee, int level) FindEmployee(Employee root, int number, in
 
 
 
-
-
-
-
-
 static void Traverse(Employee originiEmployee)
 {
 
@@ -141,25 +141,13 @@ static void Traverse(Employee originiEmployee)
     }
 
     Console.Write(originiEmployee.Name);
-    Console.WriteLine(originiEmployee.Sallary);
+    Console.WriteLine(", Sallary:   " + originiEmployee.Sallary);
 
     if (originiEmployee.Right != null)
     {
         Traverse(originiEmployee.Right);
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -191,12 +179,6 @@ static void AddEmployee(Employee root, Employee toAdd)
         }
     }
 }
-
-
-
-
-
-
 
 
 

@@ -1,15 +1,16 @@
 ﻿
+using System;
 using System.Xml.Linq;
 using static System.Net.Mime.MediaTypeNames;
 
 
-int variation = 4;
+int choise = 4;
 
 while (true)
 
 {
 
-    if (variation == 3)
+    if (choise == 3)
     {
         break;
     }
@@ -23,23 +24,23 @@ while (true)
 
     Employee root = null;
 
+    // ввод имени и зартплаты
+
     while (true)
     {
 
         Console.Write("Введите имя: ");
         var _name = Console.ReadLine();
 
-        textCheck = string.IsNullOrEmpty(_name);
-
-        if (textCheck)
+        if (string.IsNullOrEmpty(_name))
         {
             break;
         }
 
 
         Console.Write("Введите зарплату: ");
-        var s = Console.ReadLine();
-        var d = int.Parse(s);
+
+        var d = int.Parse(Console.ReadLine());
 
         if (root == null)
         {
@@ -63,7 +64,7 @@ while (true)
     Console.WriteLine("Sorted:");
     Traverse(root);
 
-
+    // поиск по зарплате
 
     while (true)
     {
@@ -71,10 +72,7 @@ while (true)
 
         Console.WriteLine("Какая зарплата ищется");
 
-        var s = Console.ReadLine();
-
-        int d = int.Parse(s);
-
+        int d = int.Parse(Console.ReadLine());
 
         var (employee, level) = FindEmployee(root, d, level: 1);
         if (employee == null)
@@ -83,22 +81,17 @@ while (true)
         }
         else
         {
-            Console.WriteLine($"Сщтрудник найден, его имя: {employee.Name}, его зарплата: {employee.Sallary}");
+            Console.WriteLine($"Сотрудник найден, его имя: {employee.Name}, его зарплата: {employee.Sallary}");
         }
 
 
         Console.WriteLine("для нового поиска сотрудника по зарплате введите 1, для ввода нового списка сотрудников введите 0 и 3 для выхода из программы");
 
-        variation = int.Parse(Console.ReadLine());
+        choise = int.Parse(Console.ReadLine());
 
-        if (variation == 0 || variation == 3)
+        if (choise == 0 || choise == 3)
         {
             break;
-        }
-
-        if (variation == 1)
-        {
-            continue;
         }
 
     }
@@ -132,20 +125,20 @@ static (Employee employee, int level) FindEmployee(Employee root, int number, in
 
 
 
-static void Traverse(Employee originiEmployee)
+static void Traverse(Employee rootNode)
 {
 
-    if (originiEmployee.Left != null)
+    if (rootNode.Left != null)
     {
-        Traverse(originiEmployee.Left);
+        Traverse(rootNode.Left);
     }
 
-    Console.Write(originiEmployee.Name);
-    Console.WriteLine(", Sallary:   " + originiEmployee.Sallary);
+    Console.Write(rootNode.Name);
+    Console.WriteLine(", Sallary:   " + rootNode.Sallary);
 
-    if (originiEmployee.Right != null)
+    if (rootNode.Right != null)
     {
-        Traverse(originiEmployee.Right);
+        Traverse(rootNode.Right);
     }
 }
 
@@ -157,26 +150,15 @@ static void AddEmployee(Employee root, Employee toAdd)
     if (toAdd.Sallary < root.Sallary)
     {
         //Идем в левое поддерево
-        if (root.Left != null)
-        {
-            AddEmployee(root.Left, toAdd);
-        }
-        else
-        {
-            root.Left = toAdd;
-        }
+
+        if (root.Left != null) AddEmployee(root.Left, toAdd);
+        root.Left = toAdd;
     }
     else
     {
         //Идем в правое поддерево
-        if (root.Right != null)
-        {
-            AddEmployee(root.Right, toAdd);
-        }
-        else
-        {
-            root.Right = toAdd;
-        }
+        if (root.Right != null) AddEmployee(root.Right, toAdd);
+        root.Right = toAdd;
     }
 }
 

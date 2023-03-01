@@ -1,0 +1,15 @@
+C:\Users\o.rovenskiy\source\repos\otus-hw-22\HW-Lesson22-add\bin\Debug\net6.0\HW-Lesson22-add.exe
+C:\Users\o.rovenskiy\source\repos\otus-hw-22\HW-Lesson22-add\bin\Debug\net6.0\HW-Lesson22-add.deps.json
+C:\Users\o.rovenskiy\source\repos\otus-hw-22\HW-Lesson22-add\bin\Debug\net6.0\HW-Lesson22-add.runtimeconfig.json
+C:\Users\o.rovenskiy\source\repos\otus-hw-22\HW-Lesson22-add\bin\Debug\net6.0\HW-Lesson22-add.dll
+C:\Users\o.rovenskiy\source\repos\otus-hw-22\HW-Lesson22-add\bin\Debug\net6.0\HW-Lesson22-add.pdb
+C:\Users\o.rovenskiy\source\repos\otus-hw-22\HW-Lesson22-add\obj\Debug\net6.0\HW-Lesson22-add.csproj.AssemblyReference.cache
+C:\Users\o.rovenskiy\source\repos\otus-hw-22\HW-Lesson22-add\obj\Debug\net6.0\HW-Lesson22-add.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\o.rovenskiy\source\repos\otus-hw-22\HW-Lesson22-add\obj\Debug\net6.0\HW-Lesson22-add.AssemblyInfoInputs.cache
+C:\Users\o.rovenskiy\source\repos\otus-hw-22\HW-Lesson22-add\obj\Debug\net6.0\HW-Lesson22-add.AssemblyInfo.cs
+C:\Users\o.rovenskiy\source\repos\otus-hw-22\HW-Lesson22-add\obj\Debug\net6.0\HW-Lesson22-add.csproj.CoreCompileInputs.cache
+C:\Users\o.rovenskiy\source\repos\otus-hw-22\HW-Lesson22-add\obj\Debug\net6.0\HW-Lesson22-add.dll
+C:\Users\o.rovenskiy\source\repos\otus-hw-22\HW-Lesson22-add\obj\Debug\net6.0\refint\HW-Lesson22-add.dll
+C:\Users\o.rovenskiy\source\repos\otus-hw-22\HW-Lesson22-add\obj\Debug\net6.0\HW-Lesson22-add.pdb
+C:\Users\o.rovenskiy\source\repos\otus-hw-22\HW-Lesson22-add\obj\Debug\net6.0\HW-Lesson22-add.genruntimeconfig.cache
+C:\Users\o.rovenskiy\source\repos\otus-hw-22\HW-Lesson22-add\obj\Debug\net6.0\ref\HW-Lesson22-add.dll
